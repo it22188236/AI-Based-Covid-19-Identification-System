@@ -1,0 +1,23 @@
+data:
+  root: ../data
+  splits_dir: splits
+  noises_dir: noises
+
+augmentation:
+  min_snr_db: 0
+  max_snr_db: 30
+  pitch_shift_semitones: [-4, 4]
+  time_stretch_rate: [0.8, 1.2]
+  apply_prob: 0.7
+
+features:
+  type: log_mel # options: mfcc, log_mel, gfcc
+  sample_rate: 22050
+  n_mels: 128
+  n_mfcc: 40
+
+training:
+  batch_size: 32
+  num_epochs: 30
+  learning_rate: 0.001
+  model_save_path: ../models/best_model.pth
