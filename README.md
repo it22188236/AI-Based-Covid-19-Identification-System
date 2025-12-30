@@ -11,3 +11,34 @@ AI-based cough classification
 Noise-robust audio processing
 
 Simple and user-friendly interface
+
+🧠 Technologies Used
+
+Python
+
+TensorFlow / Keras
+
+Librosa
+
+NumPy
+
+Git & GitHub
+
+project/
+│
+├── data/
+│   ├── clean_cough/
+│   ├── mixed_cough/
+│
+├── model/
+│   └── cough_model.h5
+│
+├── app/
+│   ├── ui/
+│   └── logic/
+│
+├── docs/
+│   ├── sketches/
+│   ├── design_report.pdf
+│
+└── README.md
