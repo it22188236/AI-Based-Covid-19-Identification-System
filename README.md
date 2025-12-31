@@ -39,24 +39,27 @@ CPCE extracts chaos metrics per phase → **64D vector** (16D × 4 phases).
 
 root/
 ├── data/
-│ ├── raw/ # Original Coswara (date folders + participant UUIDs)
-│ ├── clean_audio/ # positive/ & negative/ folders
-│ ├── splits/ # train.csv, val.csv, test.csv
-│ └── processed/ # CPCE features, model, heatmaps
+│ ├── raw/ # Original Coswara dataset (date folders + participant UUIDs)
+│ ├── clean_audio/ # Cleaned audio organized into positive/ and negative/
+│ ├── splits/ # Dataset splits (train.csv, val.csv, test.csv)
+│ └── processed/ # Extracted CPCE features, trained models, heatmaps
+│
 ├── src/
-│ ├── **init**.py # (Optional) Makes src a package
-│ ├── setup_dataset.py # Organize Coswara → clean structure + splits
-│ ├── audio_processing.py # Phase segmentation
-│ ├── feature_extraction.py # Chaos metrics (robust Higuchi FD, Lyapunov, Entropy)
-│ ├── model.py # Lightweight 1D CNN + training
-│ └── utils.py # Data loading & saving
+│ ├── **init**.py # (Optional) Makes src a Python package
+│ ├── setup_dataset.py # Organize Coswara → clean structure + dataset splits
+│ ├── audio_processing.py # Cough phase segmentation (inspiration, compression, expulsion, glottis)
+│ ├── feature_extraction.py # Chaos metrics (Higuchi FD, Lyapunov Exponent, Entropy)
+│ ├── model.py # Lightweight 1D CNN model + training logic
+│ └── utils.py # Helper functions for loading, saving, logging
+│
 ├── notebooks/
 │ ├── 01_data_preparation.ipynb
 │ ├── 02_feature_extraction.ipynb
 │ ├── 03_model_training.ipynb
-│ └── 04_evaluation.ipynb # Clinical phase-wise heatmaps
-├── main.py # End-to-end: extract → train → evaluate
-└── README.md
+│ └── 04_evaluation.ipynb # Clinical phase-wise heatmap visualizations
+│
+├── main.py # End-to-end pipeline: extract → train → evaluate
+└── README.md # Project documentation
 
 ## Quick Start
 
