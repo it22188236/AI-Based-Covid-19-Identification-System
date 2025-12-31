@@ -37,7 +37,7 @@ CPCE extracts chaos metrics per phase → **64D vector** (16D × 4 phases).
 
 ## Project Structure
 
-````text
+```text
 root/
 ├── data/
 │   ├── raw/                  # Original Coswara dataset (date folders + participant UUIDs)
@@ -61,7 +61,7 @@ root/
 │
 ├── main.py                   # End-to-end pipeline: extract → train → evaluate
 └── README.md                 # Project documentation
-
+```
 
 ## Quick Start
 
@@ -69,4 +69,4 @@ root/
 
 ```bash
 python src/setup_dataset.py --coswara_path "data/raw" --output_dir "data/clean_audio"
-````
+```
