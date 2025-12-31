@@ -37,7 +37,7 @@ CPCE extracts chaos metrics per phase → **64D vector** (16D × 4 phases).
 
 ## Project Structure
 
-cpce_project/
+root/
 ├── data/
 │ ├── raw/ # Original Coswara (date folders + participant UUIDs)
 │ ├── clean_audio/ # positive/ & negative/ folders
