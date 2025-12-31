@@ -37,29 +37,31 @@ CPCE extracts chaos metrics per phase → **64D vector** (16D × 4 phases).
 
 ## Project Structure
 
+````text
 root/
 ├── data/
-│ ├── raw/ # Original Coswara dataset (date folders + participant UUIDs)
-│ ├── clean_audio/ # Cleaned audio organized into positive/ and negative/
-│ ├── splits/ # Dataset splits (train.csv, val.csv, test.csv)
-│ └── processed/ # Extracted CPCE features, trained models, heatmaps
+│   ├── raw/                  # Original Coswara dataset (date folders + participant UUIDs)
+│   ├── clean_audio/          # Cleaned audio organized into positive/ and negative/
+│   ├── splits/               # Dataset splits (train.csv, val.csv, test.csv)
+│   └── processed/            # Extracted CPCE features, trained models, heatmaps
 │
 ├── src/
-│ ├── **init**.py # (Optional) Makes src a Python package
-│ ├── setup_dataset.py # Organize Coswara → clean structure + dataset splits
-│ ├── audio_processing.py # Cough phase segmentation (inspiration, compression, expulsion, glottis)
-│ ├── feature_extraction.py # Chaos metrics (Higuchi FD, Lyapunov Exponent, Entropy)
-│ ├── model.py # Lightweight 1D CNN model + training logic
-│ └── utils.py # Helper functions for loading, saving, logging
+│   ├── __init__.py           # (Optional) Makes src a Python package
+│   ├── setup_dataset.py      # Organize Coswara → clean structure + dataset splits
+│   ├── audio_processing.py   # Cough phase segmentation (inspiration, compression, expulsion, glottis)
+│   ├── feature_extraction.py # Chaos metrics (Higuchi FD, Lyapunov Exponent, Entropy)
+│   ├── model.py              # Lightweight 1D CNN model + training logic
+│   └── utils.py              # Helper functions for loading, saving, logging
 │
 ├── notebooks/
-│ ├── 01_data_preparation.ipynb
-│ ├── 02_feature_extraction.ipynb
-│ ├── 03_model_training.ipynb
-│ └── 04_evaluation.ipynb # Clinical phase-wise heatmap visualizations
+│   ├── 01_data_preparation.ipynb
+│   ├── 02_feature_extraction.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation.ipynb   # Clinical phase-wise heatmap visualizations
 │
-├── main.py # End-to-end pipeline: extract → train → evaluate
-└── README.md # Project documentation
+├── main.py                   # End-to-end pipeline: extract → train → evaluate
+└── README.md                 # Project documentation
+
 
 ## Quick Start
 
@@ -67,4 +69,4 @@ root/
 
 ```bash
 python src/setup_dataset.py --coswara_path "data/raw" --output_dir "data/clean_audio"
-```
+````
