@@ -1,0 +1,8 @@
+tensorflow==2.20.0
+numpy==1.26.4
+scikit-learn==1.8.0
+matplotlib==3.8.3 
+opencv-python==4.9.0.80
+pandas==2.2.1
+seaborn==0.13.2
+PyYAML==6.0.1
