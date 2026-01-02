@@ -1,0 +1,8 @@
+data:
+  img_size: 224
+  batch_size: 32
+training:
+  epochs: 20
+  learning_rate: 0.001
+model:
+  architecture: resnet50  # Or vgg16, custom CNN
