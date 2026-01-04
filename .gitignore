@@ -2,3 +2,7 @@ data/
 New Feature/
 venv/
 new_updated_dataset/
+
+src/__pycache__
+src/.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
