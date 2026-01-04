@@ -14,7 +14,7 @@ Unlike traditional spectral features (MFCC, Gammatone), CPCE captures **non-line
 
 ### Key Advantages vs Baselines
 
-| Metric               | CPCE (Ours)         | MFCC / Gammatone Baselines |
+| Metric               | CPCE                | MFCC / Gammatone Baselines |
 | -------------------- | ------------------- | -------------------------- |
 | **Accuracy**         | **96.95%**          | 92–93%                     |
 | **Model Parameters** | **85K**             | 1.2–2.1M                   |
