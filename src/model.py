@@ -1,9 +1,11 @@
+import tensorflow as tf
 from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 import cv2  # For overlay
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 def build_model(num_classes=3):
     base = ResNet50(weights='imagenet', include_top=False, input_shape=(224,224,3))
